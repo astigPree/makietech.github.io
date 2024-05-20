@@ -1,0 +1,575 @@
+:root{
+    --background : #003366;
+    --text-color : #F8F8FF;
+    --nav-bar-text : #66CCFF;
+    --selected-text-color : #bbe6fc;
+    --header-font : 'Roboto', sans-serif;
+    --content-font : Arial, Helvetica, sans-serif;
+    --overall-content-font : sans-serif;
+}
+
+
+body{
+    background: var(--background);
+    margin: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 10.0vw ;
+}
+
+
+/* design on the larger device such as PC  */
+/* @media only screen and (min-width: 1224px) { */
+
+/* navigations locations  */
+.navigation-container{
+    position: fixed;
+    height: 100%;
+    width: 40%;
+}
+
+.brandname{
+    text-align: right;
+    color: var(--text-color);
+    font-family: var(--header-font);
+    font-size: 4.0vw;
+    margin: 0;
+    margin-top: 0.5vw;
+    font-weight: 700;
+    letter-spacing: 0.5vw;
+}
+
+.brand-logo-div{
+    margin: 0;
+    margin-top: 0.5vw;
+    width: 5.0vw;
+    height: 5.0vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0.0vw;
+    left : 7.5vw;
+}
+
+
+.brand-logo-div img{
+    resize: both;
+    width: 100%;
+    height: 100%;
+}
+
+/* 
+nav {
+    background-color: red;
+} */
+
+.navigation-bar{
+    margin-left: 25.0vw;
+    width: 15.0vw;
+    list-style-type: none;
+    font-size: 1.0vw;
+    letter-spacing: 0.2vw;
+    font-family: var(--content-font);
+}
+
+.navigation-bar > *{
+    margin-top: 1.0vw;
+}
+
+.navigation-bar li a{
+    transition: font-size 0.2s;
+}
+
+.navigation-bar li a:hover{
+    font-size: 1.4vw;
+    cursor: pointer;
+}
+
+.navigation-bar-selected{
+    font-size: 1.4vw;
+}
+
+.navigation-bar-selected i{
+    color: var(--selected-text-color);
+}
+
+.navigation-bar li a{
+    text-decoration: none;
+    color: var(--nav-bar-text);
+}
+
+.my-img-container{
+    width: 18.0vw;
+    height: 18.0vw;
+    filter: drop-shadow(0 0 1.0vw rgba(0,0,0,0.1));
+    position: absolute;
+    right: 1.0vw;
+    top: 18.0vw;
+}
+
+
+.my-img-container img{
+    resize: both;
+    width: 100%;
+    height: 100%;
+}
+
+.img-tag{
+    position: absolute;
+    font-size: 1.5vw;
+    font-family: var(--header-font);
+    padding: 1.0vw;
+    width: 10.0vw;
+    text-align: center;
+    right: 7.0vw;
+    top : 28.5vw;
+    font-weight: bold;
+    color: var(--background);
+    transform: rotate(20deg);
+}
+
+.contacts {
+    width: 100%;
+    resize: horizontal;
+    height: 10.0vw;
+    position: absolute;
+    bottom: 0;
+}
+
+
+.accounts{
+    list-style-type: none;
+    position: relative;
+    right: 0;
+    top: 1.5vw;
+    display: flex;
+    column-gap: 2.5vw;
+    justify-content: right;
+    margin-right: 5.0vw;
+}
+
+.accounts li{
+    display: flex;
+    column-gap: 0.6vw;
+    font-size: 1.2vw;
+    padding: 0.5vw;
+    color: var(--nav-bar-text);
+    cursor: pointer;
+    font-family: var(--content-font);
+    position: relative;
+}
+
+.accounts li::after{
+    content: "";
+    width: 0;
+    height: 100%;
+    background-color: var(--nav-bar-text);
+    bottom: 1px;
+    left: 0;
+    transition: width 0.3s;
+    position: absolute;
+    border-radius: 5px;
+    z-index: -1;
+}
+
+.accounts li:hover::after{
+    width: 100%;
+}
+
+.accounts li:hover{
+    color: var(--background);
+}
+
+
+.main-contact{
+    list-style-type: none;
+    position: relative;
+    right: 0;
+    bottom: 0;
+    top: 1.5vw;
+    display: flex;
+    column-gap: 2.5vw;
+    justify-content: right;
+    margin-right: 5.0vw;
+}
+
+.main-contact li{
+    display: flex;
+    column-gap: 0.6vw;
+    font-size: 0.8vw;
+    padding: 0.5vw;
+    color: var(--nav-bar-text);
+    cursor: pointer;
+    font-family: var(--content-font);
+    position: relative;
+}
+
+.main-contact li::after{
+    content: "";
+    width: 100%;
+    height: 3px;
+    background-color: var(--selected-text-color);
+    bottom: 1px;
+    transition: all 0.3s;
+    transform: scale(0);
+    position: absolute;
+    border-radius: 5px;
+}
+
+.main-contact li:hover::after{
+    transform: scale(1);
+}
+
+/* navigations locations  */
+
+
+/* overall content of the screen  */
+
+.fix-margin{
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    right: 0;
+    width: 55%;
+    height: 6.0vw;
+    background-color: var(--background);
+}
+
+.vertical-line{
+    position: fixed;
+    height: 100%;
+    width: 1%;
+    display: flex;
+    top: 0;
+    left: 42%;
+    justify-content: center;
+    align-items: center;
+}
+
+.vertical-line span{
+    resize: both;
+    height: 85%;
+    width: 20%;
+    border-radius: 1.0vw;
+    background-color: var(--text-color);
+}
+
+.overall-contents{
+    position: absolute;
+    right: 0;
+    top: 7.0vw;
+    width: 55%;
+    height: fit-content;
+}
+
+.my-name {
+    font-family: var(--overall-content-font);
+    font-size: 2.0vw;
+    margin-left: 0.5vw;
+    line-height: 2.0vw;
+    letter-spacing: 0.05vw;
+    margin-bottom: 4.0svh;
+    color: var(--selected-text-color);
+}
+
+.my-name b{
+    font-size: 2.5vw;
+    color: var(--text-color);
+}
+
+.introduction{
+    font-family: var(--overall-content-font);
+    color: var(--selected-text-color);
+    font-size: 1.0vw;
+    margin-left: 0.5vw;
+    margin-right: 10.0vw;
+    line-height: 2.0vw;
+    letter-spacing: 0.05vw;
+}
+
+.content-div{
+    font-size: 5.0svh;
+    font-family: var(--header-font);
+    color: var(--nav-bar-text);
+    margin-bottom: 3.5svh;
+    display: flex;
+    column-gap: 2.0vw;
+    letter-spacing: 0.4svh;
+}
+
+.content-div-below{
+    margin-top: 9.0svh;
+}
+
+.skills-type{ 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+}
+
+.skills-type p{
+    text-align: center;
+    font-family: var(--content-font);
+    position: relative;
+    font-size: 3.0svh;
+    letter-spacing: 0.2svh;
+    color: var(--nav-bar-text);
+    width: fit-content;
+    padding-left: 1.0svh;
+    padding-right: 1.0svh;
+}
+
+.skills-type p::after{
+    content: "";
+    width: 100%;
+    height: 0.4svh;
+    background-color: var(--selected-text-color);
+    bottom: -1.0svh;
+    position: absolute;
+    left: 0;
+    border-radius: 0.4svh;
+}
+
+.skill-set{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    resize: horizontal;
+    width: 60%;
+    margin: 3.0svh auto;
+    height: fit-content;
+    padding: 1.0vw;
+    gap: 2.0vw;
+}
+
+.skill{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 120px;
+    margin: 0 0.5vw;
+    gap: 1.0vw;
+    padding-top: 1.2vw ;
+    padding-bottom: 1.2vw;
+    row-gap: 2.0svh;
+    background-color: var(--background);
+    color: var(--nav-bar-text);
+    border: 1px solid var(--nav-bar-text);
+    border-radius: 1.0vw;
+    position: relative;
+    cursor: pointer;
+}
+
+.skill i {
+    font-size: 5.0svh;
+}
+
+.skill object{
+    resize: both;
+    height: 45%;
+    width: 45%;
+}
+
+.skill b{
+    font-size: 1.5svh;
+    font-family: var(--header-font);
+    letter-spacing: 0.2svh;
+}
+
+.skill div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    resize: both;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    flex-direction: column;
+}
+
+.skill div::after{
+    content: "";
+    width: 0;
+    height: 100%;
+    right: 0;
+    transition: width 0.3s;
+    position: absolute;
+    border-radius: 5px;
+    z-index: 9;
+    background-color: var(--nav-bar-text);
+    border-radius: 2.0svh;
+}
+
+.skill div:hover::after{
+    width: 100%;
+}
+
+.skill p{
+    margin: 0;
+    font-size: 2.5rem;
+    font-family: var(--header-font);
+    color: var(--background);
+    opacity: 0;
+    transition: all 0.8s ease;
+    z-index: 10;
+}
+
+.skill div b{
+    margin: 0;
+    font-size: 1.0rem;
+    font-family: var(--header-font);
+    color: var(--background);
+    opacity: 0;
+    transition: all 0.8s ease;
+    z-index: 10;
+}
+
+.skill:hover p {
+    opacity: 1;
+}
+
+.skill:hover div b{
+    opacity: 1;
+
+}
+
+.project{
+    margin-top: 2.5vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    /* border: 2px solid var(--nav-bar-text); */
+    /* border-radius: 2.0vw; */
+    resize: horizontal;
+    width: 85%;
+    margin-left: 2.0vw;
+    padding: 1.0svh;
+    column-gap: 3.0svh;
+    height: 11.7vw;
+}
+
+.project img{
+    flex: 0 0 200px;    
+    width: 10.0vw;
+    resize: vertical;
+    height: 100%;
+    border-radius: 0.5vw;
+}
+
+.project-descriptions{
+    margin-top: 2.0svh;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.0;
+}
+
+.project-descriptions b{
+    font-size: 1.5vw;
+    color: var(--selected-text-color);
+    font-family: var(--header-font);
+    letter-spacing: 0.5svh;
+    width: fit-content;
+    position: relative;
+    margin-left: 0.5svh;
+    /* background-color: red; */
+}
+
+.project-descriptions span{
+    height: 0.2vw;
+    min-height: 1px;
+    resize: horizontal;
+    width: 95%;
+    background-color: var(--nav-bar-text);
+    border-radius: 1.0svh;
+    /* background-color: red; */
+}
+
+.project-descriptions > p{
+    width: 95%;
+    color: var(--nav-bar-text);
+    font-size: 0.8vw;
+    letter-spacing: 0.1vw;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    /* background-color: red; */
+}
+
+.project-descriptions div{
+    display: flex;
+    height: fit-content;
+    justify-content: end;
+    /* background-color: red; */
+}
+
+.project-descriptions div button{
+    opacity: 0;
+    margin: 0;
+    resize: vertical;
+    height: 100%;
+    width: fit-content;
+    background-color: var(--nav-bar-text);
+    color: var(--background);
+    font-family: var(--content-font);
+    font-size: 0.9vw;
+    font-weight: bold;
+    letter-spacing: 0.1vw;
+    border-radius: 1.8vw;
+    cursor: pointer;
+    transition: opacity 0.2s;
+    text-align: center;
+    padding: 0.5vw;
+    align-self: center;
+    border-width: 0px;
+}
+
+.qualification{
+    display: flex;
+    flex-direction: column;
+    margin-top: 6.0svh;
+    margin-left: 2.0vw;
+    margin-bottom: 2.0svh;
+    /* background-color: red; */
+    margin-right: 1.0vw;
+    height: fit-content;
+}
+
+.qualification > * {
+    margin: 0 1.0vw;
+    letter-spacing: 0.02vw;
+}
+
+.qualification h3{
+    color: var(--selected-text-color);
+}
+
+.qualification p{
+    color: var(--nav-bar-text);
+    margin-bottom: 0.9svh;
+}
+
+.qualification span{
+    height: 0.2vw;
+    min-height: 1px;
+    resize: horizontal;
+    width: 94%;
+    background-color: var(--nav-bar-text);
+    border-radius: 1.0svh;
+    margin-bottom: 1.0vw ;
+    margin-top: 0.5vw;
+    /* background-color: red; */
+}
+
+
+
+
+
+
