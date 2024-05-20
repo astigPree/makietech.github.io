@@ -67,12 +67,13 @@ nav {
 } */
 
 .navigation-bar{
-    margin-left: 25.0vw;
+    margin-left: 21.0vw;
     width: 15.0vw;
     list-style-type: none;
     font-size: 1.0vw;
     letter-spacing: 0.2vw;
     font-family: var(--content-font);
+    text-align: right;
 }
 
 .navigation-bar > *{
