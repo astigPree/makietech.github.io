@@ -51,7 +51,8 @@ html{
     align-items: center;
     position: absolute;
     top: 0.0vw;
-    left : 7.5vw;
+    left : 6.5vw;
+    position: absolute;
 }
 
 
@@ -229,7 +230,8 @@ nav {
 /* overall content of the screen  */
 
 .fix-margin{
-    position: fixed;
+    /* position: fixed; */
+    display: none;
     z-index: 999;
     top: 0;
     right: 0;
@@ -251,7 +253,7 @@ nav {
 
 .vertical-line span{
     resize: both;
-    height: 85%;
+    height: 74%;
     width: 20%;
     border-radius: 1.0vw;
     background-color: var(--text-color);
